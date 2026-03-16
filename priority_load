@@ -1,0 +1,18 @@
+def priority_load(supplies, priority_item):
+    priority = []
+    others = []
+
+    for item in supplies:
+        if item == priority_item:
+            priority.append(item)
+        else:
+            others.append(item)
+
+    return priority + others
+
+
+supplies = ["water", "food", "medkit", "food", "rope"]
+
+result = priority_load(supplies, "medkit")
+
+print(result)
